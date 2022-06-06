@@ -2,15 +2,19 @@
  * Determines whether the given string is a palindrome, i.e. if you were to reverse the order of the characters inside the string, you would get back the original string.
  */
 function isPalindrome(str) {
+
   let letterArray = str.split('')
   
   for (let x = 0; x < Math.ceil(letterArray.length/2); x++){
+
     let tempLetterHold = letterArray[x]
     letterArray[x] = letterArray[letterArray.length-x-1]
     letterArray[letterArray.length-x-1] = tempLetterHold
+
   }
 
   return letterArray.join('') === str
+
 }
 
 describe('isPalindrome', function() {

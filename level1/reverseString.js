@@ -4,15 +4,19 @@
  * Returns the new string.
  */
 function reverseString(str) {
+
   let letterArray = str.split('')
   
   for (let x = 0; x < Math.ceil(letterArray.length/2); x++){
+
     let tempLetterHold = letterArray[x]
     letterArray[x] = letterArray[letterArray.length-x-1]
     letterArray[letterArray.length-x-1] = tempLetterHold
+
   }
 
   return letterArray.join("")
+  
 }
 
 describe('reverseString', function() {

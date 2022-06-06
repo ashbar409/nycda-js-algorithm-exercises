@@ -13,6 +13,7 @@ function isPrime(number) {
   }
 
   return false
+  
 }
 
 describe('isPrime', function() {

@@ -3,6 +3,7 @@
  * Returns the new string.
  */
 function camelize(str) {
+
   let letterArray = str.split("")
   
   for (let x = 0; x < letterArray.length; x++){
@@ -13,8 +14,9 @@ function camelize(str) {
       letterArray[x] = letterArray[x].toLowerCase()}
 
   }
-  
+
   return letterArray.join("")
+  
 }
 
 console.log(camelize('string for testing'))
