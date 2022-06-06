@@ -2,9 +2,22 @@
  * Given a string, it "camelizes" by uppercasing every character at an even index, and lowercasing every character at an odd index.
  * Returns the new string.
  */
-function camelize() {
+function camelize(str) {
+  let letterArray = str.split("")
   
+  for (let x = 0; x < letterArray.length; x++){
+    
+    if(x % 2 == 0){
+      letterArray[x] = letterArray[x].toUpperCase()
+    } else {
+      letterArray[x] = letterArray[x].toLowerCase()}
+
+  }
+  
+  return letterArray.join("")
 }
+
+console.log(camelize('string for testing'))
 
 describe('camelize', function() {
   const assert = require("chai").assert;
